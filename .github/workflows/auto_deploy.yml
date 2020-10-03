@@ -1,12 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: BootCamp-1st
+name: BootCamp 1st
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -22,11 +22,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Installing Node
-        run: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2-beta
         with:
-          node-version: 12  
+          node-version: 12
+
       # Runs a set of commands using the runners shell
       - name: Installing surge
         run: npm install --global surge
       - name: deploying using surge
-        run: surge ./ bootcamp-1stproject.surge.sh --token $ {{ secrets.SURGE_TOKEN }}
+        run: surge ./ bootcamp-1stproject.surge.sh --token ${{ secrets.SURGE_TOKEN }}
