@@ -1,3 +1,8 @@
-.main{background-color: chartreuse;
-color: rgb(185, 27, 61);
-text-align: center;}
+.main{background-color: rgb(173, 175, 171);
+color: rgb(0, 0, 0);
+text-overflow: 2px 2px rgb(252, 157, 48);
+text-align: center;
+width: 100vw;
+height: 100vh;
+padding: 2px 1px 1px;
+margin: auto;}
